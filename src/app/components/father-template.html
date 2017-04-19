@@ -1,0 +1,18 @@
+<div>
+	<div>Esta es la cabecera del componente padre</div>
+	<p>{{fatherController.baz}}</p>
+	
+	<son-component foo="Valor de foo establecida como atributo de son-component"
+		bar="fatherController.bar" baz="fatherController.setBaz()"></son-component>
+
+	<div>Este es el pie del componente padre</div>
+
+	 <ul>
+        <li ng-repeat="fruta in fatherController.frutas">{{fruta}}</li>
+    </ul>
+
+
+	<div ng-if="fatherController.propBooleana">
+		<p>Esto se pintará si el if es verdadero</p>
+	</div>
+</div>
