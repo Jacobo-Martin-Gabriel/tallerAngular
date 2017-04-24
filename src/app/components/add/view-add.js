@@ -11,10 +11,12 @@
 
     vm.$onInit = function() { 
       vm.showMsg = false;
+      vm.showSuccessMsg=false;
       vm.formIsSend = false;     
     };
 
     vm.addAnimal = function() {
+      vm.showSuccessMsg=false;
        var newAnimal = {
          name: vm.animalName, 
          img: vm.animalImg,
@@ -31,6 +33,12 @@
 
       if ( !vm.showMsg ) {
         animalsFactory.addAnimal(newAnimal);
+        vm.showSuccessMsg=true;
+        vm.animalName='';
+        vm.animalImg='';
+        vm.animalType='';
+        vm.formIsSend=false;
+
       }
     }
   }

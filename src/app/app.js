@@ -34,15 +34,23 @@
       template: '<h3>About Us: work in progress</h3>'
     };
 
-    var about = {
+    var add = {
       name:'addAnimal',
       url: '/addAnimal',
       template: '<view-add></view-add>'
     };
 
+     var edit = {
+      name:'edit',
+      url: '/edit',
+      template: '<view-edit></view-edit>'
+    };
+    
+
     $stateProvider.state(main);
     $stateProvider.state(detail);
-    $stateProvider.state(about);
+    $stateProvider.state(add);
+    $stateProvider.state(edit);
   
     /* Definimos una ruta por defecto: */
     $urlRouterProvider.otherwise('/main');

@@ -39,6 +39,10 @@
       self.allAnimals.push(newAnimal);
     };
 
+    module.editAnimal = function(animal) {
+      self.allAnimals[animal.id]=animal;
+    };
+
     return module;
   };
 

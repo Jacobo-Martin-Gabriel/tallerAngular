@@ -71,13 +71,28 @@
 .msg-error {
     margin: 1em;
     padding: 1em;
-    background: red;
-    color: #fff;
+    background: lightyellow;
+    color: red;
     font-weight: bold;
     font-size: 22px;
+    border: thin solid red;
+    border-radius: 2px;
+}
+
+.msg-success {
+    margin: 1em;
+    padding: 1em;
+    background: white;
+    color:green;
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 2px;
+    border:thin solid green;
 }
 
 .has-error {
     border: 1px solid red;
     color: red;
 }
+
+

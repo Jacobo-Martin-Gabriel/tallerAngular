@@ -1,0 +1,39 @@
+<article>
+    <p>Escoja el animal que quiere editar del siguiente menú desplegable</p>
+    <select ng-model="viewEdit.animalSelected" ng-change="viewEdit.editAnimal()">
+       <option ng-repeat="item in viewEdit.allAnimals" value="{{item.id}}">{{item.name}}</option>
+   </select>
+
+
+    <div class="msg-error" ng-show="viewEdit.showErrorMsg">RELLENA LOS CAMPOS!!!!</div>
+    <div class="msg-success" ng-show="viewEdit.showSuccessMsg">ANIMAL ACTUALIZADO!!!!</div>
+
+    <div ng-show="viewEdit.showForm">
+        <p>
+            <input type="text" id="animalName" ng-model="viewEdit.animalName" ng-class="{ 'has-error': !viewEdit.animalName && viewEdit.formIsSend }">
+            <label for="animalName">
+            Nombre
+        </label>
+        </p>
+        <p>
+            <input type="text" id="animalImg" ng-model="viewEdit.animalImg" ng-class="{ 'has-error': !viewEdit.animalImg && viewEdit.formIsSend }">
+            <label for="animalImg">
+            Imagen
+        </label>
+        </p>
+        <p>
+            <select id="animalType" ng-model="viewEdit.animalType" ng-class="{ 'has-error': !viewEdit.animalType && viewEdit.formIsSend }">
+            <option value="mamiferos">Mamíferos</option>
+            <option value="aves">Aves</option>
+        </select>
+            <label for="animalType">
+            Tipo
+        </label>
+        </p>
+        <p>
+            <button ng-click="viewEdit.updateAnimal()">
+            Actualizar datos
+        </button>
+        </p>
+    </div>
+</article>
